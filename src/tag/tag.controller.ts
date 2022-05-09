@@ -3,9 +3,9 @@ import { TagService } from './tag.service';
 
 @Controller('tags')
 export class TagController {
-  constructor(private readonly tagServise: TagService) {}
+  constructor(private readonly tagService: TagService) {}
   @Get()
-  findeAll() {
-    return this.tagServise.findAll;
+  findeAll(): string[] {
+    return this.tagService.findAll();
   }
 }
