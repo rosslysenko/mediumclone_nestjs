@@ -1,4 +1,9 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 
-@Controller('tag')
-export class TagController {}
+@Controller('tags')
+export class TagController {
+  @Get()
+  findeAll() {
+    return ['dragons', 'coffee'];
+  }
+}
