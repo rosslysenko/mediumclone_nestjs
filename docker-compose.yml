@@ -1,12 +1,11 @@
 version: '3.8'
-
 services:
-pgbd:
+  pg_db:
     image: postgres
-    ports:
-    - 5432:5432
+    restart: always
     environment:
-    - POSTGRES_USER: mediumclone
-    - POSTGRES_PASSWORD: 123
-    - POSTGRES_DB: mediumclone
-  
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_USER=mediumclone
+      - POSTGRES_DB=mediumclone
+    ports:
+      - 5432:5432
